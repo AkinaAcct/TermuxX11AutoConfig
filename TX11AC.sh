@@ -82,3 +82,4 @@ while [[ $CHECK -ne 2 ]]; do
 	fi
 done
 #               INFO:start config
+
