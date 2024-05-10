@@ -22,12 +22,12 @@ if [[ -n $ASDEBUG ]]; then
 fi
 # ENV
 X11APKURL="https://github.com/termux/termux-x11/releases/download/latest/app-arm64-v8a-debug.apk"
-PROJREPO="https://github.com/AtopesSayuri/TermuxX11AutoConfig"
-PROJRAWURL="https://github.com/AtopesSayuri/TermuxX11AutoConfig/raw/main"
+PROJREPO="https://github.com/AkinaAcct/TermuxX11AutoConfig"
+PROJRAWURL="https://github.com/AkinaAcct/TermuxX11AutoConfig/raw/main"
 # Often used func
 print_help() {
 	blue "Termux X11 Auto Config"
-	blue "By AtopesSayuri"
+	blue "By AkinaAcct"
 	blue ""
 	blue "Usage:"
 	blue "  -h,        print this help."
