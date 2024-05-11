@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-#By Atopes
+#By Akina
 yellow() {
 	echo -e "\033[33m${1}\033[0m"
 }
@@ -12,8 +12,8 @@ green() {
 red() {
 	echo -e "\033[31m${1}\033[0m"
 }
-if [[ -n $ASDEBUG ]]; then
-	if [[ "${ASDEBUG}" != "true" ]]; then
+if [[ -n $AADEBUG ]]; then
+	if [[ "${AADEBUG}" != "true" ]]; then
 		red "[E]: No ENV found. Exit."
 		exit 1
 	else
