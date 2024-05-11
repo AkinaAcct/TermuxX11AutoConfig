@@ -13,12 +13,8 @@ red() {
 	echo -e "\033[31m${1}\033[0m"
 }
 if [[ -n $AADEBUG ]]; then
-	if [[ "${AADEBUG}" != "true" ]]; then
-		red "[E]: No ENV found. Exit."
-		exit 1
-	else
-		set -x
-	fi
+	set -x
+	yellow "[W]: Correct environment variables are detected. Debug mode is on."
 fi
 # ENV
 X11APKURL="https://github.com/termux/termux-x11/releases/download/latest/app-arm64-v8a-debug.apk"
@@ -43,7 +39,7 @@ while getopts ":h" OPT; do
 	case $OPT in
 	h)
 		print_help
-        exit 0
+		exit 0
 		;;
 	:)
 		red "[E]: Option -$OPTARG requires an argument." >&2 && exit 1
