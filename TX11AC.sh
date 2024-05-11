@@ -21,7 +21,7 @@ X11APKURL="https://github.com/termux/termux-x11/releases/download/latest/app-arm
 PROJREPO="https://github.com/AkinaAcct/TermuxX11AutoConfig"
 PROJRAWURL="https://github.com/AkinaAcct/TermuxX11AutoConfig/raw/main"
 # Often used func
-print_help() {
+print_help() { # USELESS FUNC LOL
 	blue "Termux X11 Auto Config"
 	blue "By AkinaAcct"
 	blue ""
@@ -29,13 +29,13 @@ print_help() {
 	blue "  -h,        print this help."
 	blue ""
 }
-pause() {
+pause() { # What a GOOD way to pause
 	echo -e "\033[34m"
 	read -p "[I]: Press enter to continue."
 	echo -e "\033[0m"
 }
 # Arg solver
-while getopts ":h" OPT; do
+while getopts ":h" OPT; do # USELESS FUNC AGAIN LOL
 	case $OPT in
 	h)
 		print_help
@@ -50,8 +50,8 @@ while getopts ":h" OPT; do
 		;;
 	esac
 done
-#                              INFO: File Main Section
-#               INFO: check packages
+# INFO: File Main Section
+# INFO: check packages
 while [[ $CHECK -ne 2 ]]; do
 	CHECK=0
 	RESULT="$(pm list packages </dev/null 2>&1 | cat | grep package:com.termux.x11)"
@@ -112,6 +112,8 @@ termux_starttx11_root() {
 		su -c "/system/bin/app_process / com.termux.x11.CmdEntryPoint :0"
 	EOF
 	chmod +x ${PREFIX}/bin/starttx11-root
+	blue "[I]: Success. Use the command 'termux_starttx11_root' to start root X11 server."
+	exit 0
 }
 termux_starttx11() {
 	blue "[I]: Developing... Now exit."
